@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ReactCountryFlag from 'react-country-flag';
 
-// Définition des types
 type LanguageLevel = 'Native' | 'Fluency & Accuracy' | 'Upper-Intermediate' | 'Basic';
 
 interface Language {
@@ -12,7 +11,6 @@ interface Language {
   score: number;
 }
 
-// Données des langues
 const languages: Language[] = [
   { code: 'MG', name: 'Malagasy', level: 'Native', score: 100 },
   { code: 'GB', name: 'English', level: 'Fluency & Accuracy', score: 90 },
@@ -24,7 +22,6 @@ const languages: Language[] = [
   { code: 'DE', name: 'Deutsch', level: 'Basic', score: 20 },
 ];
 
-// Couleurs pour chaque niveau
 const levelColor: Record<LanguageLevel, string> = {
   Native: 'bg-green-500',
   'Fluency & Accuracy': 'bg-blue-500',
@@ -33,40 +30,40 @@ const levelColor: Record<LanguageLevel, string> = {
 };
 
 const Languages = () => (
-  <section id="languages" className="py-12 md:py-20 bg-indigo-50">
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-8 md:mb-12">
+  <section id="languages" className="py-10 md:py-16 bg-indigo-50">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6 md:mb-10">
         Languages
-        <span className="block w-16 md:w-20 h-1.5 md:h-2 bg-gradient-to-r from-indigo-500 to-blue-400 mx-auto mt-3 md:mt-4 rounded-full" />
+        <span className="block w-14 md:w-20 h-1 md:h-1.5 bg-gradient-to-r from-indigo-500 to-blue-400 mx-auto mt-2 md:mt-3 rounded-full" />
       </h2>
 
-      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:gap-6 sm:grid-cols-2">
         {languages.map((lang, idx) => (
           <motion.div
             key={lang.code}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="bg-white rounded-lg md:rounded-xl shadow-sm md:shadow-md p-4 md:p-6 lg:p-8 flex flex-col"
+            className="bg-white rounded-lg shadow-sm p-3 md:p-5 flex flex-col"
           >
-            <div className="flex items-center justify-between mb-4 md:mb-6">
-              <div className="flex items-center gap-2 md:gap-3">
+            <div className="flex items-center justify-between mb-3 md:mb-4">
+              <div className="flex items-center gap-2">
                 <ReactCountryFlag
                   countryCode={lang.code}
                   svg
-                  style={{ fontSize: '1.5em', lineHeight: '1.5em' }}
+                  style={{ fontSize: '1.2em', lineHeight: '1.2em' }}
                   title={lang.name}
                 />
-                <h3 className="text-lg md:text-xl font-semibold text-gray-800">{lang.name}</h3>
+                <h3 className="text-base md:text-lg font-semibold text-gray-800">{lang.name}</h3>
               </div>
               <span
-                className={`text-xs font-medium text-white px-2 py-0.5 md:px-3 md:py-1 rounded ${levelColor[lang.level]}`}
+                className={`text-xs font-medium text-white px-2 py-0.5 rounded ${levelColor[lang.level]}`}
               >
                 {lang.level}
               </span>
             </div>
 
-            <div className="h-2.5 md:h-3 w-full bg-gray-200 rounded-full overflow-hidden mb-2 md:mb-3">
+            <div className="h-2 md:h-2.5 w-full bg-gray-200 rounded-full overflow-hidden mb-1 md:mb-2">
               <motion.div
                 className={`${levelColor[lang.level]}`}
                 initial={{ width: 0 }}
@@ -75,7 +72,7 @@ const Languages = () => (
                 style={{ height: '100%' }}
               />
             </div>
-            <div className="text-right text-xs md:text-sm text-gray-600">
+            <div className="text-right text-xs text-gray-600">
               {lang.score}%
             </div>
           </motion.div>

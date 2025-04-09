@@ -77,64 +77,64 @@ const Experience = () => {
 
   return (
     <section
-      className="relative bg-gradient-to-b from-indigo-50 to-blue-100 py-20 px-4 sm:px-6 lg:px-8"
+      className="relative bg-gradient-to-b from-indigo-50 to-blue-100 py-12 md:py-20 px-4 sm:px-6 lg:px-8"
       id="experience"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12 md:mb-16">
           Professional Timeline
-          <span className="block w-20 h-1.5 bg-indigo-600 mx-auto mt-4 rounded-full"></span>
+          <span className="block w-16 md:w-20 h-1 md:h-1.5 bg-indigo-600 mx-auto mt-3 md:mt-4 rounded-full"></span>
         </h2>
 
-        <div className="relative space-y-20 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-indigo-500 before:to-blue-400">
+        <div className="relative space-y-12 md:space-y-20 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 md:before:w-1 before:bg-gradient-to-b before:from-indigo-500 before:to-blue-400">
           {experiences.map((exp, index) => {
             const isRight = index % 2 === 0;
             const color = exp.color;
 
             return (
               <AnimatedExperienceItem key={index} delay={index * 0.2}>
-                <div className="relative group pl-8 md:pl-0">
+                <div className="relative group pl-6 md:pl-8 md:pl-0">
                   <div
                     className={`md:flex ${
                       isRight
                         ? "md:justify-start"
                         : "md:flex-row-reverse md:justify-end"
-                    } items-center gap-8`}
+                    } items-center gap-6 md:gap-8`}
                   >
                     <div
                       className={`md:w-1/2 ${
-                        isRight ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                        isRight ? "md:pr-6 md:text-right" : "md:pl-6 md:text-left"
                       }`}
                     >
-                      <p className="text-lg text-gray-600 font-medium mb-2">{exp.year}</p>
+                      <p className="text-base md:text-lg text-gray-600 font-medium mb-1 md:mb-2">{exp.year}</p>
                       <div
                         className={`hidden md:block h-0.5 bg-${color}-300 w-full`}
                       ></div>
                     </div>
 
                     <div
-                      className={`absolute -left-1 md:left-1/2 top-6 w-5 h-5 bg-${color}-600 rounded-full border-2 border-white shadow-lg z-10`}
+                      className={`absolute -left-1 md:left-1/2 top-5 md:top-6 w-4 h-4 md:w-5 md:h-5 bg-${color}-600 rounded-full border-2 border-white shadow-md md:shadow-lg z-10`}
                     ></div>
 
                     <div
                       className={`md:w-1/2 ${
-                        isRight ? "md:pl-8" : "md:pr-8"
+                        isRight ? "md:pl-6" : "md:pr-6"
                       }`}
                     >
-                      <div className="bg-white rounded-xl shadow-2xl p-8 space-y-4 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl border border-gray-100">
-                        <h3 className={`text-2xl font-bold text-${color}-700 mb-2`}>
+                      <div className="bg-white rounded-lg md:rounded-xl shadow-lg md:shadow-2xl p-5 md:p-8 space-y-3 md:space-y-4 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl md:hover:shadow-3xl border border-gray-100">
+                        <h3 className={`text-xl md:text-2xl font-bold text-${color}-700 mb-1 md:mb-2`}>
                           {exp.title}
                         </h3>
-                        <div className="flex items-center gap-3 text-gray-700">
-                          <span className="text-2xl">{exp.emoji}</span>
-                          <p className="text-lg font-semibold">{exp.company}</p>
+                        <div className="flex items-center gap-2 md:gap-3 text-gray-700">
+                          <span className="text-xl md:text-2xl">{exp.emoji}</span>
+                          <p className="text-base md:text-lg font-semibold">{exp.company}</p>
                         </div>
-                        <div className="flex gap-2 flex-wrap">
+                        <div className="flex gap-1 md:gap-2 flex-wrap">
                           {(Array.isArray(exp.type) ? exp.type : [exp.type]).map(
                             (tag, i) => (
                               <span
                                 key={i}
-                                className={`px-3 py-1 bg-${color}-100 text-${color}-800 rounded-full text-sm font-medium border border-${color}-200`}
+                                className={`px-2 py-0.5 md:px-3 md:py-1 bg-${color}-100 text-${color}-800 rounded-full text-xs md:text-sm font-medium border border-${color}-200`}
                               >
                                 {tag}
                               </span>
