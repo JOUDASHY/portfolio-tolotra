@@ -16,12 +16,12 @@ interface Language {
 const languages: Language[] = [
   { code: 'MG', name: 'Malagasy', level: 'Native', score: 100 },
   { code: 'GB', name: 'English', level: 'Fluency & Accuracy', score: 90 },
-  { code: 'FR', name: 'Français', level: 'Fluency & Accuracy', score: 90 },
+  { code: 'FR', name: 'Français', level: 'Fluency & Accuracy', score: 100 },
   { code: 'ES', name: 'Español', level: 'Fluency & Accuracy', score: 90 },
-  { code: 'CN', name: '中文', level: 'Upper-Intermediate', score: 75 },
-  { code: 'RU', name: 'Русский', level: 'Upper-Intermediate', score: 75 },
-  { code: 'TR', name: 'Türk', level: 'Basic', score: 40 },
-  { code: 'DE', name: 'Deutsch', level: 'Basic', score: 40 },
+  { code: 'CN', name: '中文', level: 'Upper-Intermediate', score: 40 },
+  { code: 'RU', name: 'Русский', level: 'Upper-Intermediate', score: 40 },
+  { code: 'TR', name: 'Türk', level: 'Basic', score: 20 },
+  { code: 'DE', name: 'Deutsch', level: 'Basic', score: 20 },
 ];
 
 // Couleurs pour chaque niveau
@@ -33,40 +33,40 @@ const levelColor: Record<LanguageLevel, string> = {
 };
 
 const Languages = () => (
-  <section id="languages" className="py-20 bg-indigo-50">
-    <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 text-center mb-12">
+  <section id="languages" className="py-12 md:py-20 bg-indigo-50">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-8 md:mb-12">
         Languages
-        <span className="block w-20 h-2 bg-gradient-to-r from-indigo-500 to-blue-400 mx-auto mt-4 rounded-full" />
+        <span className="block w-16 md:w-20 h-1.5 md:h-2 bg-gradient-to-r from-indigo-500 to-blue-400 mx-auto mt-3 md:mt-4 rounded-full" />
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2">
         {languages.map((lang, idx) => (
           <motion.div
             key={lang.code}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="bg-white rounded-xl shadow-md p-8 flex flex-col"
+            className="bg-white rounded-lg md:rounded-xl shadow-sm md:shadow-md p-4 md:p-6 lg:p-8 flex flex-col"
           >
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
+            <div className="flex items-center justify-between mb-4 md:mb-6">
+              <div className="flex items-center gap-2 md:gap-3">
                 <ReactCountryFlag
                   countryCode={lang.code}
                   svg
-                  style={{ fontSize: '2em' }}
+                  style={{ fontSize: '1.5em', lineHeight: '1.5em' }}
                   title={lang.name}
                 />
-                <h3 className="text-xl font-semibold text-gray-800">{lang.name}</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-800">{lang.name}</h3>
               </div>
               <span
-                className={`text-xs font-medium text-white px-3 py-1 rounded ${levelColor[lang.level]}`}
+                className={`text-xs font-medium text-white px-2 py-0.5 md:px-3 md:py-1 rounded ${levelColor[lang.level]}`}
               >
                 {lang.level}
               </span>
             </div>
 
-            <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden mb-3">
+            <div className="h-2.5 md:h-3 w-full bg-gray-200 rounded-full overflow-hidden mb-2 md:mb-3">
               <motion.div
                 className={`${levelColor[lang.level]}`}
                 initial={{ width: 0 }}
@@ -75,7 +75,7 @@ const Languages = () => (
                 style={{ height: '100%' }}
               />
             </div>
-            <div className="text-right text-sm text-gray-600">
+            <div className="text-right text-xs md:text-sm text-gray-600">
               {lang.score}%
             </div>
           </motion.div>

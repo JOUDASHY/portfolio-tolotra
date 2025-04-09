@@ -1,93 +1,97 @@
 import React from "react";
 
-// Composant de pied de page complet et responsive
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-10 mt-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Section 1 : Description ou Présentation */}
-        <div>
+    <footer className="bg-gray-900 text-white py-8 md:py-10 mt-16 md:mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        {/* Section 1 : Description */}
+        <div className="sm:col-span-2 lg:col-span-1">
           <h2 className="text-lg font-semibold mb-3">Your Brand</h2>
           <p className="text-sm text-gray-400 leading-relaxed">
             Your Brand est une plateforme moderne dédiée à la gestion de projets, 
             la formation en ligne et la collaboration à distance. Nous aidons les 
-            entreprises et les particuliers à atteindre leurs objectifs grâce à des outils performants.
+            entreprises et les particuliers à atteindre leurs objectifs.
           </p>
         </div>
 
-        {/* Section 2 : Navigation rapide */}
+        {/* Section 2 : Navigation */}
         <div>
           <h2 className="text-lg font-semibold mb-3">Liens utiles</h2>
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <a href="#about" className="hover:text-white transition">À propos</a>
+              <a href="#about" className="hover:text-white transition-colors duration-200">À propos</a>
             </li>
             <li>
-              <a href="#services" className="hover:text-white transition">Nos services</a>
+              <a href="#services" className="hover:text-white transition-colors duration-200">Nos services</a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-white transition">Projets</a>
+              <a href="#projects" className="hover:text-white transition-colors duration-200">Projets</a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white transition">Contact</a>
+              <a href="#contact" className="hover:text-white transition-colors duration-200">Contact</a>
             </li>
             <li>
-              <a href="/terms" className="hover:text-white transition">Conditions d'utilisation</a>
+              <a href="/terms" className="hover:text-white transition-colors duration-200">Conditions</a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition">Politique de confidentialité</a>
+              <a href="/privacy" className="hover:text-white transition-colors duration-200">Confidentialité</a>
             </li>
           </ul>
         </div>
 
-        {/* Section 3 : Réseaux sociaux et contact */}
+        {/* Section 3 : Contact */}
         <div>
-          <h2 className="text-lg font-semibold mb-3">Restez connectés</h2>
+          <h2 className="text-lg font-semibold mb-3">Contact</h2>
           <p className="text-sm text-gray-400 mb-4">
-            Suivez-nous sur les réseaux sociaux pour rester informé de nos dernières actualités.
+            Suivez-nous sur les réseaux sociaux pour nos dernières actualités.
           </p>
           <div className="flex space-x-4">
             <a
               href="https://www.linkedin.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-white text-gray-400 text-xl transition"
+              className="hover:text-white text-gray-400 text-xl transition-colors duration-200"
             >
               <i className="fab fa-linkedin" />
             </a>
             <a
               href="https://github.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:text-white text-gray-400 text-xl transition"
+              className="hover:text-white text-gray-400 text-xl transition-colors duration-200"
             >
               <i className="fab fa-github" />
             </a>
             <a
-              href="mailto:yourmail@example.com"
+              href="mailto:contact@example.com"
               aria-label="Email"
-              className="hover:text-white text-gray-400 text-xl transition"
+              className="hover:text-white text-gray-400 text-xl transition-colors duration-200"
             >
               <i className="fas fa-envelope" />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Twitter"
-              className="hover:text-white text-gray-400 text-xl transition"
+              className="hover:text-white text-gray-400 text-xl transition-colors duration-200"
             >
               <i className="fab fa-twitter" />
             </a>
           </div>
+          <div className="mt-4 text-sm text-gray-400">
+            <p>contact@yourbrand.com</p>
+            <p>+261 34 00 000 00</p>
+          </div>
         </div>
       </div>
 
-      {/* Ligne de séparation */}
-      <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Your Brand. Tous droits réservés.
+      {/* Copyright */}
+      <div className="border-t border-gray-800 mt-8 md:mt-10 pt-6 text-center text-xs sm:text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Your Brand. Tous droits réservés.</p>
+        <p className="mt-2">Made with ♡ in Madagascar</p>
       </div>
     </footer>
   );
