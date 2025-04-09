@@ -30,7 +30,7 @@ export default function Home() {
         <Skills />
         <Banner1 />
         <Languages />
-        <Footer />
+        {/* <Footer /> */}
       </main>
 
       {/* Footer éventuel si besoin */}
