@@ -2,7 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ReactCountryFlag from 'react-country-flag';
 
-const languages = [
+// Définition des types
+type LanguageLevel = 'Native' | 'Fluency & Accuracy' | 'Upper-Intermediate' | 'Basic';
+
+interface Language {
+  code: string;
+  name: string;
+  level: LanguageLevel;
+  score: number;
+}
+
+// Données des langues
+const languages: Language[] = [
   { code: 'MG', name: 'Malagasy', level: 'Native', score: 100 },
   { code: 'GB', name: 'English', level: 'Fluency & Accuracy', score: 90 },
   { code: 'FR', name: 'Français', level: 'Fluency & Accuracy', score: 90 },
@@ -13,7 +24,8 @@ const languages = [
   { code: 'DE', name: 'Deutsch', level: 'Basic', score: 40 },
 ];
 
-const levelColor = {
+// Couleurs pour chaque niveau
+const levelColor: Record<LanguageLevel, string> = {
   Native: 'bg-green-500',
   'Fluency & Accuracy': 'bg-blue-500',
   'Upper-Intermediate': 'bg-yellow-500',
@@ -39,7 +51,6 @@ const Languages = () => (
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                {/* Drapeau agrandi */}
                 <ReactCountryFlag
                   countryCode={lang.code}
                   svg
@@ -49,16 +60,12 @@ const Languages = () => (
                 <h3 className="text-xl font-semibold text-gray-800">{lang.name}</h3>
               </div>
               <span
-                className={`
-                  text-xs font-medium text-white px-3 py-1 rounded 
-                  ${levelColor[lang.level] || 'bg-gray-400'}
-                `}
+                className={`text-xs font-medium text-white px-3 py-1 rounded ${levelColor[lang.level]}`}
               >
                 {lang.level}
               </span>
             </div>
 
-            {/* Barre de progression agrandie */}
             <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden mb-3">
               <motion.div
                 className={`${levelColor[lang.level]}`}

@@ -17,14 +17,35 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setSubmitted(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("access_key", "30e0198b-9fe5-4e87-97a5-97dc8ac90f58"); // Remplace avec ta vraie clé
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("message", form.message);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("Échec de l'envoi : " + result.message);
+      }
+    } catch (error) {
+      alert("Une erreur est survenue lors de l'envoi du message.");
+    } finally {
       setLoading(false);
-      setForm({ name: "", email: "", message: "" });
-    }, 2000);
+    }
   };
 
   return (
@@ -68,6 +89,12 @@ const Contact = () => {
             >
               {loading ? "Envoi en cours..." : "SOUMETTRE"}
             </button>
+
+            {submitted && (
+              <p className="text-green-400 mt-2">
+                Merci ! Votre message a bien été envoyé.
+              </p>
+            )}
 
             <p className="text-sm text-white mt-4">
               Image de <a href="https://www.freepik.com" className="underline">Freepik</a>

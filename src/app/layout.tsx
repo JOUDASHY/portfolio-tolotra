@@ -1,16 +1,5 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,15 +12,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Inclusion du CDN Tailwind */}
+        {/* 1) Préconnect + CDN Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://cdn.tailwindcss.com"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400&family=Geist+Mono:wght@400&display=swap"
           rel="stylesheet"
         />
+
+        {/* 2) Tailwind via CDN + config inline pour étendre fontFamily */}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          // ⚠️ dangerouslySetInnerHTML est nécessaire ici pour injecter la config
+          dangerouslySetInnerHTML={{
+            __html: `
+              tailwind.config = {
+                theme: {
+                  extend: {
+                    fontFamily: {
+                      geist: ['Geist', 'sans-serif'],
+                      'geist-mono': ['Geist Mono', 'monospace'],
+                    },
+                  }
+                }
+              }
+            `,
+          }}
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased font-geist">
         {children}
       </body>
     </html>

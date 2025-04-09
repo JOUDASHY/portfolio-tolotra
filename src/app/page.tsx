@@ -8,8 +8,9 @@ import AboutSection from "./components/AboutSection";
 import Skills from "./components/Skills";
 import Languages from "./components/Languages";
 import Banner from "./components/Banner";
-import Banner2 from "./components/Banner2.tsx";
-import Banner1 from "./components/Banner1.tsx";
+// Supprimez les extensions .tsx des imports
+import Banner2 from "./components/Banner2";  // ← Enlevez .tsx
+import Banner1 from "./components/Banner1";  // ← Enlevez .tsx
 import Footer from "./components/Footer";
 
 export default function Home() {

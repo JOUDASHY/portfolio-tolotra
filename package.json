@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,7 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "aos": "^2.3.4",
     "framer-motion": "^12.6.3",
-    "next": "15.2.4",
+    "next": "^15.2.5",
     "react": "^19.0.0",
     "react-country-flag": "^3.1.0",
     "react-dom": "^19.0.0",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20.17.30",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19",
