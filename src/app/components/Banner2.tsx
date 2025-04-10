@@ -15,25 +15,25 @@ const Banner2 = () => {
   
       {/* Contenu */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8 text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-snug sm:leading-tight animate-fade-in-up">
           Creating Connections Through Learning<br className="hidden md:block"/>
-          <span className="text-indigo-200 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+          <span className="text-indigo-200 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] animate-fade-in-up-second">
             & Multilingual Exchange
           </span>
         </h1>
   
-        <p className="text-base sm:text-lg md:text-xl text-indigo-50 mb-6 sm:mb-8 max-w-2xl md:max-w-3xl mx-auto px-2 sm:px-0">
+        <p className="text-base sm:text-lg md:text-xl text-indigo-50 mb-6 sm:mb-8 max-w-2xl md:max-w-3xl mx-auto px-2 sm:px-0 animate-fade-in-up-third">
           Dedicated educator and communicator committed to revitalizing Madagascar's academic landscape through inventive methods and intercultural insight.
         </p>
   
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-full">
+          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-full animate-fade-in-up-third">
             <span className="text-white text-base sm:text-lg">🌍</span>
             <span className="text-white font-medium text-sm sm:text-base">
               French | English | Spanish | Russian
             </span>
           </div>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105">
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 animate-fade-in-up-third">
             Explore Portfolio
           </button>
         </div>

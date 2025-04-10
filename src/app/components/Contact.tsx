@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaTwitter,
   FaYoutube,
+  FaLinkedin,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -127,10 +128,30 @@ const Contact = () => {
               Follow Us
             </h3>
             <div className="flex gap-8 text-black text-3xl sm:text-4xl">
-              <FaFacebookF className="hover:text-pink-500 cursor-pointer transition-colors" />
-              <FaInstagram className="hover:text-pink-500 cursor-pointer transition-colors" />
-              <FaTwitter className="hover:text-pink-500 cursor-pointer transition-colors" />
-              <FaYoutube className="hover:text-pink-500 cursor-pointer transition-colors" />
+              <a
+                href="https://www.facebook.com/nirina.sarah.96"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition-colors"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com/al.eddie03/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition-colors"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/eddie-tolotra-alitsiry-766050263/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-500 transition-colors"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
         </div>
