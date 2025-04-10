@@ -109,12 +109,12 @@ const Contact = () => {
             Join our newsletter
           </p>
           <h2 className="text-pink-500 text-2xl sm:text-3xl font-semibold">
-            Contact Us
+            Contact Me
           </h2>
           <div className="space-y-2 text-base sm:text-lg text-gray-800">
-            <p>3045 10 Sunrise Avenue, 123-456-7890</p>
-            <p>Mon–Fri: 9am–8pm</p>
-            <p>Sat–Sun: 9am–10pm</p>
+            <p>Andrefan'Ambohijanahary, Antananarivo Renivohitra</p>
+            {/* <p>Mon–Fri: 9am–8pm</p>
+            <p>Sat–Sun: 9am–10pm</p> */}
             <a
               href="mailto:alitsiryeddietolotra@gmail.com"
               className="text-pink-500 underline"
