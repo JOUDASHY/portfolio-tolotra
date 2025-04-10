@@ -24,7 +24,7 @@ const Contact = () => {
 
     try {
       const formData = new FormData();
-      formData.append("access_key", "30e0198b-9fe5-4e87-97a5-97dc8ac90f58");
+      formData.append("access_key", "787ea491-c99b-45f9-8b15-7375e439fe7e");
       formData.append("name", form.name);
       formData.append("email", form.email);
       formData.append("message", form.message);
