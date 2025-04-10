@@ -11,7 +11,15 @@ export default function HeroSection() {
         {/* Text block */}
         <div className="mt-6 flex w-full flex-col md:mt-0 md:w-1/2 lg:pr-12 xl:pr-16">
           <motion.h1 
-            className="text-4xl font-bold leading-tight sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl"
+            className="
+              text-2xl        /* mobile */
+              sm:text-3xl     /* ≥640px */
+              md:text-4xl     /* ≥768px */
+              lg:text-5xl     /* ≥1024px */
+              xl:text-6xl     /* ≥1280px */
+              2xl:text-7xl    /* ≥1536px */
+              font-bold leading-tight
+            "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -24,7 +32,15 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p 
-            className="mt-4 text-lg text-pink-100 md:pr-8 md:text-xl lg:text-2xl"
+            className="
+              mt-4 
+              text-sm         /* mobile */
+              sm:text-base    /* ≥640px */
+              md:text-lg      /* ≥768px */
+              lg:text-xl      /* ≥1024px */
+              xl:text-2xl     /* ≥1280px */
+              text-pink-100 md:pr-8
+            "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -33,20 +49,35 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.div 
-            className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-5 md:gap-6"
+            className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 md:gap-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <a
               href="#projects"
-              className="inline-block rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4 md:text-base"
+              className="
+                inline-block rounded-xl 
+                bg-gradient-to-r from-pink-500 to-purple-500 
+                px-4 py-2 text-xs     /* mobile */
+                sm:px-6 sm:py-3 sm:text-sm
+                md:px-8 md:py-4 md:text-base
+                font-semibold text-white shadow-md 
+                transition-all duration-300 hover:scale-105 hover:shadow-lg
+              "
             >
               View Education Initiatives
             </a>
             <a
               href="#languages"
-              className="inline-block rounded-xl border-2 border-pink-300 bg-white/10 px-6 py-3 text-sm font-semibold text-pink-50 backdrop-blur-sm transition-all duration-300 hover:border-pink-400 hover:bg-white/20 md:px-8 md:py-4 md:text-base"
+              className="
+                inline-block rounded-xl border-2 border-pink-300 bg-white/10 
+                px-4 py-2 text-xs     /* mobile */
+                sm:px-6 sm:py-3 sm:text-sm
+                md:px-8 md:py-4 md:text-base
+                font-semibold text-pink-50 backdrop-blur-sm 
+                transition-all duration-300 hover:border-pink-400 hover:bg-white/20
+              "
             >
               Language Expertise
             </a>
@@ -54,17 +85,23 @@ export default function HeroSection() {
 
           {/* Language badge */}
           <motion.div 
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-pink-900/30 px-4 py-2 backdrop-blur-sm md:mt-10 md:gap-3 md:px-6 md:py-3"
+            className="
+              mt-8 inline-flex items-center gap-1.5 
+              rounded-full bg-pink-900/30 px-3 py-1.5 
+              backdrop-blur-sm
+              sm:mt-10 sm:gap-2 sm:px-4 sm:py-2
+              md:gap-3 md:px-6 md:py-3
+            "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <span className="text-2xl md:text-3xl">🌍</span>
-            <div className="flex gap-3 md:gap-4">
-              <span className="text-pink-300 text-base font-medium md:text-lg">FR</span>
-              <span className="text-purple-300 text-base font-medium md:text-lg">EN</span>
-              <span className="text-pink-300 text-base font-medium md:text-lg">ES</span>
-              <span className="text-purple-300 text-base font-medium md:text-lg">RU</span>
+            <span className="text-xl sm:text-2xl md:text-3xl">🌍</span>
+            <div className="flex gap-2 sm:gap-3 md:gap-4">
+              <span className="text-pink-300 text-xs sm:text-sm md:text-lg font-medium">FR</span>
+              <span className="text-purple-300 text-xs sm:text-sm md:text-lg font-medium">EN</span>
+              <span className="text-pink-300 text-xs sm:text-sm md:text-lg font-medium">ES</span>
+              <span className="text-purple-300 text-xs sm:text-sm md:text-lg font-medium">RU</span>
             </div>
           </motion.div>
         </div>

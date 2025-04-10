@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
-  FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
 
@@ -50,18 +48,26 @@ const Contact = () => {
   };
 
   return (
-    <footer className="bg-white text-gray-900 py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <footer className="bg-white text-gray-900 py-8 sm:py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
         {/* Form */}
-        <div className="space-y-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
+              className="
+                w-full 
+                px-3 py-2            /* mobile */
+                sm:px-4 sm:py-3      /* ≥640px */
+                md:px-5 md:py-4      /* ≥768px */
+                bg-transparent border-b border-gray-400 
+                text-sm sm:text-base md:text-lg 
+                text-gray-900 placeholder-gray-500 focus:outline-none
+              "
               required
             />
             <input
@@ -70,7 +76,15 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="Your Email Address"
-              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
+              className="
+                w-full 
+                px-3 py-2 
+                sm:px-4 sm:py-3 
+                md:px-5 md:py-4 
+                bg-transparent border-b border-gray-400 
+                text-sm sm:text-base md:text-lg 
+                text-gray-900 placeholder-gray-500 focus:outline-none
+              "
               required
             />
             <textarea
@@ -79,42 +93,55 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="Your Message"
               rows={5}
-              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
+              className="
+                w-full 
+                px-3 py-2 
+                sm:px-4 sm:py-3 
+                md:px-5 md:py-4 
+                bg-transparent border-b border-gray-400 
+                text-sm sm:text-base md:text-lg 
+                text-gray-900 placeholder-gray-500 focus:outline-none
+              "
               required
             ></textarea>
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-pink-500 text-white px-8 py-3 hover:bg-pink-600 transition font-semibold text-base sm:text-lg"
+              className="
+                bg-pink-500 text-white 
+                px-5 py-2 text-sm           /* mobile */
+                sm:px-6 sm:py-3 sm:text-base/* ≥640px */
+                md:px-8 md:py-4 md:text-lg  /* ≥768px */
+                hover:bg-pink-600 
+                transition font-semibold rounded
+              "
             >
               {loading ? "Sending..." : "SEND"}
             </button>
 
             {submitted && (
-              <p className="text-green-600 mt-3 text-base sm:text-lg">
+              <p className="text-green-600 mt-2 text-sm sm:text-base md:text-lg">
                 Thank you! Your message has been sent.
               </p>
             )}
 
-            <p className="text-sm sm:text-base text-gray-500 mt-6">
+            <p className="text-xs sm:text-sm text-gray-500 mt-4">
               Image by <a href="https://www.freepik.com" className="underline">Freepik</a>
             </p>
           </form>
         </div>
 
         {/* Contact Info */}
-        <div className="space-y-6 mt-8 md:mt-0">
-          <p className="uppercase text-sm sm:text-base text-gray-600">
+        <div className="space-y-4 sm:space-y-6 md:space-y-8 mt-6 md:mt-0">
+          <p className="uppercase text-xs sm:text-sm md:text-base text-gray-600">
             Join our newsletter
           </p>
-          <h2 className="text-pink-500 text-2xl sm:text-3xl font-semibold">
+          <h2 className="text-pink-500 text-xl sm:text-2xl md:text-3xl font-semibold">
             Contact Me
           </h2>
-          <div className="space-y-2 text-base sm:text-lg text-gray-800">
+          <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-lg text-gray-800">
             <p>Andrefan'Ambohijanahary, Antananarivo Renivohitra</p>
-            {/* <p>Mon–Fri: 9am–8pm</p>
-            <p>Sat–Sun: 9am–10pm</p> */}
             <a
               href="mailto:alitsiryeddietolotra@gmail.com"
               className="text-pink-500 underline"
@@ -123,11 +150,11 @@ const Contact = () => {
             </a>
           </div>
 
-          <div className="pt-6 border-t border-gray-200">
-            <h3 className="text-pink-500 font-semibold text-xl sm:text-2xl mb-4">
+          <div className="pt-4 sm:pt-6 border-t border-gray-200">
+            <h3 className="text-pink-500 font-semibold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
               Follow Us
             </h3>
-            <div className="flex gap-8 text-black text-3xl sm:text-4xl">
+            <div className="flex gap-4 sm:gap-6 md:gap-8 text-gray-900 text-2xl sm:text-3xl md:text-4xl">
               <a
                 href="https://www.facebook.com/nirina.sarah.96"
                 target="_blank"
