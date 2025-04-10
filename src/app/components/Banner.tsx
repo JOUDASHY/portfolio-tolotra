@@ -8,7 +8,8 @@ const Banner = () => {
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
-          backgroundPosition: 'center 20%'
+          backgroundPosition: 'center 20%',
+          backgroundAttachment: 'fixed',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/90 to-blue-900/70"></div>

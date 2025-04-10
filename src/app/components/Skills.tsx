@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-12 md:py-16 bg-gradient-to-br from-indigo-100 via-white to-pink-50 overflow-hidden">
+    <section id="skills" className="relative py-12 md:py-16 bg-gradient-to-br from-indigo-100 via-white to-pink-50 overflow-hidden">
       {/* Decorative Blobs - Reduced size on mobile */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-pink-200 rounded-full opacity-20 animate-blob animation-delay-2000"></div>
       <div className="absolute bottom-0 right-1/4 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-indigo-200 rounded-full opacity-20 animate-blob animation-delay-4000"></div>

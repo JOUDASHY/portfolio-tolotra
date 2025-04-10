@@ -4,9 +4,11 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Experience from "./components/Experience";
+import AchievementsSection from "./components/AchievementsSection";
 import AboutSection from "./components/AboutSection";
 import Skills from "./components/Skills";
 import Languages from "./components/Languages";
+import Education from "./components/Education";
 import Banner from "./components/Banner";
 // Supprimez les extensions .tsx des imports
 import Banner2 from "./components/Banner2";  // ← Enlevez .tsx
@@ -24,8 +26,11 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <Banner />
-        <Experience />
+        <AchievementsSection />
         <Banner2 />
+
+        <Experience />
+        <Education />
 
         <Skills />
         <Banner1 />

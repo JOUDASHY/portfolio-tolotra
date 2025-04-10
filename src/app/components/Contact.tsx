@@ -39,28 +39,28 @@ const Contact = () => {
         setSubmitted(true);
         setForm({ name: "", email: "", message: "" });
       } else {
-        alert("Échec de l'envoi : " + result.message);
+        alert("Send failed: " + result.message);
       }
     } catch (error) {
-      alert("Une erreur est survenue lors de l'envoi du message.");
+      alert("An error occurred while sending your message.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <footer className="bg-black text-white py-8 sm:py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Formulaire */}
-        <div>
-          <form onSubmit={handleSubmit} className="space-y-4">
+    <footer className="bg-white text-gray-900 py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Form */}
+        <div className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Votre nom"
-              className="w-full px-4 py-2 bg-transparent border-b border-white text-white placeholder-gray-300 focus:outline-none"
+              placeholder="Your Name"
+              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
               required
             />
             <input
@@ -68,71 +68,72 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Votre adresse email"
-              className="w-full px-4 py-2 bg-transparent border-b border-white text-white placeholder-gray-300 focus:outline-none"
+              placeholder="Your Email Address"
+              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
               required
             />
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Votre message"
-              rows={4}
-              className="w-full px-4 py-2 bg-transparent border-b border-white text-white placeholder-gray-300 focus:outline-none"
+              placeholder="Your Message"
+              rows={5}
+              className="w-full px-4 py-3 bg-transparent border-b border-gray-400 text-gray-900 placeholder-gray-500 focus:outline-none"
               required
             ></textarea>
 
             <button
               type="submit"
               disabled={loading}
-              className="bg-pink-500 text-white px-6 py-2 mt-2 hover:bg-pink-600 transition font-semibold text-sm sm:text-base"
+              className="bg-pink-500 text-white px-8 py-3 hover:bg-pink-600 transition font-semibold text-base sm:text-lg"
             >
-              {loading ? "Envoi en cours..." : "ENVOYER"}
+              {loading ? "Sending..." : "SEND"}
             </button>
 
             {submitted && (
-              <p className="text-green-400 mt-2 text-sm sm:text-base">
-                Merci ! Votre message a bien été envoyé.
+              <p className="text-green-600 mt-3 text-base sm:text-lg">
+                Thank you! Your message has been sent.
               </p>
             )}
 
-            <p className="text-xs sm:text-sm text-gray-400 mt-4">
-              Image de <a href="https://www.freepik.com" className="underline">Freepik</a>
+            <p className="text-sm sm:text-base text-gray-500 mt-6">
+              Image by <a href="https://www.freepik.com" className="underline">Freepik</a>
             </p>
           </form>
         </div>
 
-        {/* Infos Contact */}
-        <div className="mt-6 md:mt-0">
-          <p className="uppercase text-xs sm:text-sm text-gray-300 mb-2">
-            Rejoignez notre newsletter
+        {/* Contact Info */}
+        <div className="space-y-6 mt-8 md:mt-0">
+          <p className="uppercase text-sm sm:text-base text-gray-600">
+            Join our newsletter
           </p>
-          <h2 className="text-pink-400 text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
-            Contactez-nous
+          <h2 className="text-pink-500 text-2xl sm:text-3xl font-semibold">
+            Contact Us
           </h2>
-          <p className="mb-2 text-sm sm:text-base">3045 10 Sunrise Avenue, 123-456-7890</p>
-          <p className="mb-1 text-sm sm:text-base">Lun-Ven : 9h-20h</p>
-          <p className="mb-4 text-sm sm:text-base">Sam-Dim : 9h-22h</p>
-          <a href="mailto:contacts@esbnyc.com" className="text-pink-400 underline text-sm sm:text-base">
-            contacts@esbnyc.com
-          </a>
+          <div className="space-y-2 text-base sm:text-lg text-gray-800">
+            <p>3045 10 Sunrise Avenue, 123-456-7890</p>
+            <p>Mon–Fri: 9am–8pm</p>
+            <p>Sat–Sun: 9am–10pm</p>
+            <a
+              href="mailto:alitsiryeddietolotra@gmail.com"
+              className="text-pink-500 underline"
+            >
+              alitsiryeddietolotra@gmail.com
+            </a>
+          </div>
 
-          <div className="mt-6 sm:mt-8">
-            <h3 className="text-pink-400 font-semibold text-lg sm:text-xl mb-3 sm:mb-4">
-              Suivez-nous
+          <div className="pt-6 border-t border-gray-200">
+            <h3 className="text-pink-500 font-semibold text-xl sm:text-2xl mb-4">
+              Follow Us
             </h3>
-            <div className="flex gap-4 text-white text-lg sm:text-xl">
-              <FaFacebookF className="hover:text-pink-400 cursor-pointer transition-colors" />
-              <FaInstagram className="hover:text-pink-400 cursor-pointer transition-colors" />
-              <FaTwitter className="hover:text-pink-400 cursor-pointer transition-colors" />
-              <FaYoutube className="hover:text-pink-400 cursor-pointer transition-colors" />
+            <div className="flex gap-8 text-black text-3xl sm:text-4xl">
+              <FaFacebookF className="hover:text-pink-500 cursor-pointer transition-colors" />
+              <FaInstagram className="hover:text-pink-500 cursor-pointer transition-colors" />
+              <FaTwitter className="hover:text-pink-500 cursor-pointer transition-colors" />
+              <FaYoutube className="hover:text-pink-500 cursor-pointer transition-colors" />
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="mt-8 sm:mt-10 text-center text-gray-400 text-xs sm:text-sm">
-        ©2021 Politique de confidentialité
       </div>
     </footer>
   );

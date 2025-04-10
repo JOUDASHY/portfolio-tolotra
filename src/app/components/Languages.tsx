@@ -1,3 +1,6 @@
+"use client";
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import ReactCountryFlag from 'react-country-flag';
@@ -13,7 +16,7 @@ interface Language {
 
 const languages: Language[] = [
   { code: 'MG', name: 'Malagasy', level: 'Native', score: 100 },
-  { code: 'GB', name: 'English', level: 'Fluency & Accuracy', score: 90 },
+  { code: 'GB', name: 'English', level: 'Fluency & Accuracy', score: 100 },
   { code: 'FR', name: 'Français', level: 'Fluency & Accuracy', score: 100 },
   { code: 'ES', name: 'Español', level: 'Fluency & Accuracy', score: 90 },
   { code: 'CN', name: '中文', level: 'Upper-Intermediate', score: 40 },
