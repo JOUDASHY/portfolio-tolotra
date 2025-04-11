@@ -126,9 +126,9 @@ const Contact = () => {
               </p>
             )}
 
-            <p className="text-xs sm:text-sm text-gray-500 mt-4">
+            {/* <p className="text-xs sm:text-sm text-gray-500 mt-4">
               Image by <a href="https://www.freepik.com" className="underline">Freepik</a>
-            </p>
+            </p> */}
           </form>
         </div>
 
@@ -141,7 +141,7 @@ const Contact = () => {
             Contact Me
           </h2>
           <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-lg text-gray-800">
-            <p>Andrefan'Ambohijanahary, Antananarivo Renivohitra</p>
+            <p>Andrefan'Ambohijanahary, Antananarivo Madagascar</p>
             <a
               href="mailto:alitsiryeddietolotra@gmail.com"
               className="text-pink-500 underline"
