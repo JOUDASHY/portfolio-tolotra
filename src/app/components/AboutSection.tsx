@@ -54,7 +54,7 @@ const AboutSection = () => {
           {/* Download CV Button */}
           <div className="mt-4 sm:mt-6">
             <a
-              href="/cv.pdf"
+              href="/Tolotra_resume.pdf"
               download
               className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded-full font-medium shadow-md hover:bg-indigo-700 transition"
             >

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Banner = () => {
-  const backgroundImageUrl = "https://scontent.ftnr3-1.fna.fbcdn.net/v/t39.30808-6/480794707_1701449863804555_7186347203799277568_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEhFLzojIbA6qa6-GpR_6538TkNzV8VE0bxOQ3NXxUTRv73KKR-G8DAJo3LJuXiG2BCsA-4tJlJJGCpYPMNE2Rp&_nc_ohc=NV9jE97konwQ7kNvwEa3Eml&_nc_oc=AdkaHPIooow7I-jRskWn02OY9KlW6bn16d3ZXRh6JiV2mjjUqqkpr-Z0pgHMYb141Y0&_nc_zt=23&_nc_ht=scontent.ftnr3-1.fna&_nc_gid=bZze3eCjns8QDdXrJA5jDw&oh=00_AfHQ5rq13CAYuEfF4Xx8umxoVe077B4RkhjLLlMQw4EuJA&oe=67FB343B";
+  const backgroundImageUrl = "/tolotra.jpg";
 
   return (
     <section className="relative h-[70vh] min-h-[400px] flex items-center justify-center sm:h-[80vh] md:h-screen">
