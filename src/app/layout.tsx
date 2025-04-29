@@ -121,6 +121,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <meta name="google-site-verification" content="2ZdIsGx9QPYso8t0uM3MoNQz5UjeR71SvjNSavAqXh0" />
       </head>
       <body className="antialiased font-geist">
         <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-sans)]">
