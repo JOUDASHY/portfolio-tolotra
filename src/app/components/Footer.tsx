@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-gray-800 mt-6 md:mt-10 pt-4 md:pt-6 text-center text-xs text-gray-500">
         <p>&copy; {new Date().getFullYear()} Alitsiry Eddie Tolotra. All rights reserved.</p>
         <p className="mt-1 md:mt-2">
-          Made with ❤️ by{" "}
+          Made by{" "}
           <a
             className="text-white"
             href="https://portfolio-nilsen.unityfianar.site"
