@@ -60,13 +60,15 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "https://www.tolotra.site/cv2.jpeg",
-    shortcut: "https://www.tolotra.site/cv2.jpeg",
-    apple: "https://www.tolotra.site/cv2.jpeg",
-    other: {
-      rel: "mask-icon",
-      url: "https://www.tolotra.site/cv2.jpeg"
-    }
+    icon: [
+      { url: "/favicon.png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.png", sizes: "512x512", type: "image/png" }
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
   }
 };
 
@@ -76,7 +78,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* charset & viewport */}
+        {/* Ajout des balises favicon explicites */}
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        
+        {/* Reste du head */}
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -143,8 +150,8 @@ export default function RootLayout({
                 name: "Votre organisation"
               },
               image: "https://www.tolotra.site/cv1.jpeg",
-              email: "votre@email.com",
-              telephone: "+261XXXXXXXX",
+              email: "contact@tolotra.site",
+              telephone: "+261342254590",
               skills: ["Communication interculturelle", "Langues étrangères", "Éducation"],
               alumniOf: {
                 "@type": "EducationalOrganization",
@@ -153,7 +160,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <meta name="google-site-verification" content="2ZdIsGx9QPYso8t0uM3MoNQz5UjeR71SvjNSavAqXh0" />
+        <meta name="google-site-verification" content="zyScQCWcWe6v5KCYiRgXO_hxvsYtKcg0zPcjfWM3SHA" />
       </head>
       <body className="antialiased font-geist">
         <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-sans)]">
