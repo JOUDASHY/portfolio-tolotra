@@ -12,12 +12,12 @@ export default function HeroSection() {
         <div className="mt-6 flex w-full flex-col md:mt-0 md:w-1/2 lg:pr-12 xl:pr-16">
           <motion.h1 
             className="
-              text-2xl        /* mobile */
-              sm:text-3xl     /* ≥640px */
-              md:text-4xl     /* ≥768px */
-              lg:text-5xl     /* ≥1024px */
-              xl:text-6xl     /* ≥1280px */
-              2xl:text-7xl    /* ≥1536px */
+              text-xl         /* mobile - réduit de 2xl */
+              sm:text-2xl     /* ≥640px - réduit de 3xl */
+              md:text-3xl     /* ≥768px - réduit de 4xl */
+              lg:text-4xl     /* ≥1024px - réduit de 5xl */
+              xl:text-5xl     /* ≥1280px - réduit de 6xl */
+              2xl:text-6xl    /* ≥1536px - réduit de 7xl */
               font-bold leading-tight
             "
             initial={{ opacity: 0, y: 20 }}
@@ -34,11 +34,11 @@ export default function HeroSection() {
           <motion.p 
             className="
               mt-4 
-              text-sm         /* mobile */
-              sm:text-base    /* ≥640px */
-              md:text-lg      /* ≥768px */
-              lg:text-xl      /* ≥1024px */
-              xl:text-2xl     /* ≥1280px */
+              text-xs         /* mobile - réduit de sm */
+              sm:text-sm      /* ≥640px - réduit de base */
+              md:text-base    /* ≥768px - réduit de lg */
+              lg:text-lg      /* ≥1024px - réduit de xl */
+              xl:text-xl      /* ≥1280px - réduit de 2xl */
               text-pink-100 md:pr-8
             "
             initial={{ opacity: 0 }}
@@ -59,9 +59,9 @@ export default function HeroSection() {
               className="
                 inline-block rounded-xl 
                 bg-gradient-to-r from-pink-500 to-purple-500 
-                px-4 py-2 text-xs     /* mobile */
-                sm:px-6 sm:py-3 sm:text-sm
-                md:px-8 md:py-4 md:text-base
+                px-3 py-1.5 text-xs   /* mobile - réduit padding */
+                sm:px-5 sm:py-2 sm:text-xs
+                md:px-6 md:py-3 md:text-sm
                 font-semibold text-white shadow-md 
                 transition-all duration-300 hover:scale-105 hover:shadow-lg
               "
@@ -72,9 +72,9 @@ export default function HeroSection() {
               href="#languages"
               className="
                 inline-block rounded-xl border-2 border-pink-300 bg-white/10 
-                px-4 py-2 text-xs     /* mobile */
-                sm:px-6 sm:py-3 sm:text-sm
-                md:px-8 md:py-4 md:text-base
+                px-3 py-1.5 text-xs   /* mobile - réduit padding */
+                sm:px-5 sm:py-2 sm:text-xs
+                md:px-6 md:py-3 md:text-sm
                 font-semibold text-pink-50 backdrop-blur-sm 
                 transition-all duration-300 hover:border-pink-400 hover:bg-white/20
               "

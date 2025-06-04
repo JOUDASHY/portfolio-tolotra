@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Tolotra" }],
   alternates: {
-    canonical: "https://portfolio-tolotra.onrender.com/"
+    canonical: "https://www.tolotra.site/"
   },
   robots: {
     index: true,
@@ -28,30 +28,45 @@ export const metadata: Metadata = {
     title: "Tolotra | Multilingual Communication Specialist",
     description:
       "Visionnaire multilingue spécialisé en éducation et communication interculturelle à Madagascar.",
-    url: "https://portfolio-tolotra.onrender.com/",
+    url: "https://www.tolotra.site/",
     siteName: "Tolotra Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://portfolio-tolotra.onrender.com/cv1.jpeg",
+        url: "https://www.tolotra.site/cv1.jpeg",
         width: 1200,
         height: 630,
-        alt: "Portrait de Tolotra"
+        alt: "Portrait de Tolotra",
+        type: "image/jpeg"
       }
-    ]
+    ],
+    countryName: "Madagascar",
+    emails: ["contact@tolotra.site"],  // Ajoutez votre email
+    phoneNumbers: ["+261342254590"]  // Ajoutez votre numéro
   },
   twitter: {
     card: "summary_large_image",
     title: "Tolotra | Communication & Langues",
-    description:
-      "Spécialiste multilingue en communication interculturelle et éducation.",
-    images: ["https://portfolio-tolotra.onrender.com/cv2.jpeg"],
-    creator: "@votre_handle"
+    description: "Spécialiste multilingue en communication interculturelle et éducation.",
+    images: ["https://www.tolotra.site/cv2.jpeg"],
+    creator: "@tolotra",
+    site: "@tolotra"
+  },
+  verification: {
+    google: "2ZdIsGx9QPYso8t0uM3MoNQz5UjeR71SvjNSavAqXh0",
+    other: {
+      me: ["mailto:votre@email.com", "https://linkedin.com/in/votre-profil"]
+    }
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
+    icon: "https://www.tolotra.site/cv2.jpeg",
+    shortcut: "https://www.tolotra.site/cv2.jpeg",
+    apple: "https://www.tolotra.site/cv2.jpeg",
+    other: {
+      rel: "mask-icon",
+      url: "https://www.tolotra.site/cv2.jpeg"
+    }
   }
 };
 
@@ -108,7 +123,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Tolotra",
               birthDate: "2003-12-01",
-              url: "https://portfolio-tolotra.onrender.com/",
+              url: "https://www.tolotra.site/",
               sameAs: [
                 "https://www.linkedin.com/in/eddie-tolotra-alitsiry-766050263",
                 "https://www.facebook.com/nirina.sarah.96"
@@ -117,7 +132,24 @@ export default function RootLayout({
               description:
                 "Visionnaire multilingue spécialisé en communication interculturelle et éducation à Madagascar.",
               nationality: "Madagascar",
-              knowsLanguage: ["fr", "en", "es", "ru"]
+              knowsLanguage: ["fr", "en", "es", "ru"],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "Madagascar",
+                addressLocality: "Antananarivo"
+              },
+              worksFor: {
+                "@type": "Organization",
+                name: "Votre organisation"
+              },
+              image: "https://www.tolotra.site/cv1.jpeg",
+              email: "votre@email.com",
+              telephone: "+261XXXXXXXX",
+              skills: ["Communication interculturelle", "Langues étrangères", "Éducation"],
+              alumniOf: {
+                "@type": "EducationalOrganization",
+                name: "Votre établissement"
+              }
             }),
           }}
         />
