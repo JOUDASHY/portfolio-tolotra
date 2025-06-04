@@ -1,10 +1,10 @@
-name: Deploy React App to Render
+name: Deploy to Vercel
 
 on:
   push:
-    branches: [ main ]  # Déclenchement du workflow sur push vers main
+    branches: [ main ]
   pull_request:
-    branches: [ main ]  # Déclenchement sur PR vers main
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -12,12 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Récupère le code depuis GitHub
+        uses: actions/checkout@v2
 
-      - name: Trigger Render Deployment
+      - name: Deploy to Vercel
         run: |
-          curl -X POST "https://api.render.com/v1/services/${{ secrets.MY_RENDER_SERVICE_ID }}/deploys" \
-          -H "Authorization: Bearer ${{ secrets.MY_RENDER_API_KEY }}" \
-          -H "Accept: application/json" \
-          -H "Content-Type: application/json" \
-          -d '{}'
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_OCIu1byaksfCoqbNJm1dryr41xH9/5pwhx9zsTN" \
+          -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+          -H "Content-Type: application/json"
