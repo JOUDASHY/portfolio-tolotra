@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     "Tolotra – Visionnaire multilingue et spécialiste en communication : éducation, collaboration globale et inter-culturalité.",
   keywords: [
     "Tolotra", 
+    "Tolotra Nirina",
+    "Eddie Tolotra",
     "Multilingual", 
     "Communication", 
     "Madagascar", 
