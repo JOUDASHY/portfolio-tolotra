@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   verification: {
     google: "2ZdIsGx9QPYso8t0uM3MoNQz5UjeR71SvjNSavAqXh0",
     other: {
-      me: ["mailto:votre@email.com", "https://linkedin.com/in/votre-profil"]
+      me: ["contact@tolotra.site", "https://www.linkedin.com/in/eddie-tolotra-alitsiry-766050263/"]
     }
   },
   icons: {

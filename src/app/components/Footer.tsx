@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex space-x-3 md:space-x-4">
             <a
-              href="https://www.linkedin.com/in/nilsen-dev"
+              href="https://www.linkedin.com/in/eddie-tolotra-alitsiry-766050263/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -54,24 +54,24 @@ const Footer: React.FC = () => {
               <i className="fab fa-linkedin" />
             </a>
             <a
-              href="mailto:alitsiryeddietolotra@gmail.com"
+              href="mailto:contact@tolotra.site"
               aria-label="Email"
               className="hover:text-white text-gray-400 text-lg md:text-xl transition-colors duration-200"
             >
               <i className="fas fa-envelope" />
             </a>
             <a
-              href="https://github.com/nilsen-dev"
+              href="https://www.facebook.com/nirina.sarah.96"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              aria-label="Facebook"
               className="hover:text-white text-gray-400 text-lg md:text-xl transition-colors duration-200"
             >
-              <i className="fab fa-github" />
+              <i className="fab fa-facebook" />
             </a>
           </div>
           <div className="mt-3 md:mt-4 text-xs md:text-sm text-gray-400">
-            <p>alitsiryeddietolotra@gmail.com</p>
+            <p>contact@tolotra.site</p>
             <p>+261 38 11 671 31</p>
             <p>+261 34 22 545 90</p>
           </div>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
           Made with ❤️ by{" "}
           <a
             className="text-white"
-            href="https://portfolio-nilsen.onrender.com"
+            href="https://portfolio-nilsen.unityfianar.site"
             target="_blank"
             rel="noopener noreferrer"
           >

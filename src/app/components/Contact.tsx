@@ -143,10 +143,10 @@ const Contact = () => {
           <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-lg text-gray-800">
             <p>Andrefan'Ambohijanahary, Antananarivo Madagascar</p>
             <a
-              href="mailto:alitsiryeddietolotra@gmail.com"
+              href="mailto:contact@tolotra.site"
               className="text-pink-500 underline"
             >
-              alitsiryeddietolotra@gmail.com
+              contact@tolotra.site
             </a>
           </div>
 
