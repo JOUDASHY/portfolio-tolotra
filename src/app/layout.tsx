@@ -63,14 +63,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png" },
-      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
-      { url: "/favicon.png", sizes: "512x512", type: "image/png" }
+      { url: "https://www.tolotra.site/favicon.png", type: "image/png" },
+      { url: "https://www.tolotra.site/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "https://www.tolotra.site/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "https://www.tolotra.site/favicon.png", sizes: "192x192", type: "image/png" },
+      { url: "https://www.tolotra.site/favicon.png", sizes: "512x512", type: "image/png" }
     ],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    shortcut: "https://www.tolotra.site/favicon.png",
+    apple: "https://www.tolotra.site/favicon.png",
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        url: "https://www.tolotra.site/favicon.png",
+      }
+    ]
   }
 };
 
@@ -80,11 +87,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Ajout des balises favicon explicites */}
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-        
+        {/* Ajout des balises favicon explicites avec URLs absolues */}
+        <link rel="icon" href="https://www.tolotra.site/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://www.tolotra.site/favicon.png" />
+        <link rel="shortcut icon" href="https://www.tolotra.site/favicon.png" type="image/png" />
+        <meta property="og:image" content="https://www.tolotra.site/favicon.png" />
+
         {/* Reste du head */}
         <meta charSet="utf-8" />
         <meta
