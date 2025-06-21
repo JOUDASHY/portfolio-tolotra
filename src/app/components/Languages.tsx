@@ -51,12 +51,12 @@ const languages: Language[] = [
     level: 'Upper-Intermediate', 
     score: 40,
   },
-  { 
-    code: 'TR', 
-    name: 'Türk', 
-    level: 'Basic', 
-    score: 20,
-  },
+  // { 
+  //   code: 'TR', 
+  //   name: 'Türk', 
+  //   level: 'Basic', 
+  //   score: 20,
+  // },
   { 
     code: 'DE', 
     name: 'Deutsch', 
